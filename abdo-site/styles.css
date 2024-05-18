@@ -1,0 +1,51 @@
+/* Styles globaux pour le projet avec un thème sombre */
+
+/* Body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #333; /* Couleur de fond sombre */
+    color: #ffffff; /* Couleur du texte */
+    margin: 0;
+    padding: 0;
+}
+
+/* Barre de navigation */
+.navbar {
+    background-color: #333333; /* Couleur de fond de la barre de navigation */
+    padding: 10px 20px; /* Espacement intérieur de la barre de navigation */
+}
+
+.navbar-brand {
+    font-size: 1.5rem; /* Taille de police du logo ou du texte de la marque */
+    color: #ffffff; /* Couleur du texte de la marque */
+}
+
+.navbar-nav {
+    margin-left: auto; /* Alignement à droite des éléments de la barre de navigation */
+}
+
+.nav-item {
+    margin-left: 15px; /* Espacement horizontal entre les éléments de la barre de navigation */
+}
+
+.nav-link {
+    font-size: 1.1rem; /* Taille de police des liens de la barre de navigation */
+    color: #ffffff; /* Couleur du texte des liens de la barre de navigation */
+}
+
+.nav-link:hover {
+    color: #c2c2c2; /* Couleur du texte des liens au survol */
+}
+
+/* Container principal */
+.container {
+    max-width: 1200px; /* Largeur maximale du container principal */
+    margin: 20px auto; /* Marge extérieure pour centrer le contenu */
+    padding: 0 20px; /* Espacement intérieur du container principal */
+}
+
+
+
+
+
+

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>À propos - KOUTILLAGE</title>
+    <!-- Intégration de Bootstrap (optionnel) -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Styles CSS personnalisés -->
+    <style>
+        .mode-toggle-btn {
+            background: transparent;
+            border: none;
+            cursor: pointer;
+        }
+        .dark-mode {
+            background-color: #333;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <!-- Barre de navigation (identique à celle de la page d'accueil) -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">KOUTILLAGE</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="site.html">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Services</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="apropos.html">À propos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn btn-link mode-toggle-btn" onclick="toggleDarkMode()">
+                            <i id="mode-icon" class="far fa-moon"></i> <!-- Icône de lune pour le mode sombre -->
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Section À propos -->
+    <section class="container mt-5">
+        <div class="row">
+            <div class="col-md-6">
+                <h2>À propos de nous</h2>
+                <p>Outils de Tour est une entreprise spécialisée dans la fabrication et la vente d'outils de tour de haute qualité. Nous nous engageons à fournir à nos clients les meilleurs outils pour répondre à leurs besoins en matière d'usinage.</p>
+                <p>Nous sommes passionnés par l'innovation et la qualité, et nous nous efforçons de fournir des solutions efficaces et durables à nos clients du monde entier.</p>
+            </div>
+            <div class="col-md-6">
+                <h2>Notre équipe</h2>
+                <p>Nous sommes fiers de notre équipe talentueuse et dévouée, composée d'ingénieurs, de techniciens et de professionnels de l'industrie. Chaque membre de notre équipe apporte une expertise précieuse et une passion pour l'excellence à notre entreprise.</p>
+                <!-- Vous pouvez ajouter des informations sur les membres de l'équipe ici -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Pied de page (identique à celui de la page d'accueil) -->
+    <footer class="bg-dark text-white text-center py-3">
+        <div class="container">
+            <p>Tous droits réservés &copy; 2024 Outils de Tour</p>
+        </div>
+    </footer>
+
+    <!-- Intégration de Bootstrap (identique à celle de la page d'accueil) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Script JavaScript pour le mode sombre -->
+    <script>
+        function toggleDarkMode() {
+            const body = document.body;
+            const modeIcon = document.querySelector('#mode-icon');
+
+            if (body.classList.contains('dark-mode')) {
+                body.classList.remove('dark-mode');
+                modeIcon.classList.remove('fa-sun');
+                modeIcon.classList.add('fa-moon');
+            } else {
+                body.classList.add('dark-mode');
+                modeIcon.classList.remove('fa-moon');
+                modeIcon.classList.add('fa-sun');
+            }
+        }
+    </script>
+</body>
+</html>

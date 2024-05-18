@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nos Produits - KOUTILLAGE</title>
+    <!-- Intégration de Bootstrap (optionnel) -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Intégration de Font Awesome (pour les icônes) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- Styles CSS personnalisés -->
+    <style>
+        .mode-toggle-btn {
+            background: transparent;
+            border: none;
+            cursor: pointer;
+        }
+        .dark-mode {
+            background-color: #333;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar Bootstrap -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="site.html">KOUTILLAGE</a>
+            <!-- Insérez ici votre bouton de navigation mobile si nécessaire -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="site.html">Accueil</a>
+                    </li>
+                    
+                    
+                    <li class="nav-item active">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn btn-link mode-toggle-btn" onclick="toggleDarkMode()">
+                            <i id="mode-icon" class="far fa-moon"></i> <!-- Icône de lune pour le mode sombre -->
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h2>Informations de contact</h2>
+        <div class="contact-info">
+            <p><strong>Nom de l'entreprise :</strong>KOUTILLAGE</p>
+            <p><strong>Email :</strong> info@khoutillage.com</p>
+            <p><strong>Téléphone :</strong> 06 66 63 48 64<br>Ou<br> 003393 338 021 176</p>
+            <p><strong>Adresse :</strong> 123 Rue de l'Industrie, Ville, Pays</p>
+        </div>
+        <div class="map-container">
+            <!-- Intégrer une carte Google Maps avec votre emplacement -->
+            <!-- Remplacez "YOUR_GOOGLE_MAPS_EMBED_LINK" par le lien d'intégration de votre carte Google Maps -->
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2791.2554280841655!2d-73.61557122486033!3d45.60551072400072!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc91fa5f3e9c401%3A0x307882a7b335875d!2sWalmart%2C%206140%20Boulevard%20Henri-Bourassa%20E%2C%20Montr%C3%A9al-Nord%2C%20QC%20H1G%205X3!5e0!3m2!1sfr!2sca!4v1711216802454!5m2!1sfr!2sca" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+
+    <!-- Intégration de Bootstrap JavaScript (optionnel) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Script JavaScript pour le mode sombre -->
+    <script>
+   // Check if the user has a preference stored in localStorage
+const storedMode = localStorage.getItem('darkMode');
+const body = document.body;
+const modeIcon = document.querySelector('#mode-icon');
+
+// If a preference is stored, apply it to the body
+if (storedMode) {
+    body.classList.add('dark-mode');
+    modeIcon.classList.remove('fa-sun');
+    modeIcon.classList.add('fa-moon');
+    modeIcon.style.color = 'white'; // Change the color of the icon
+}
+
+function toggleDarkMode() {
+    body.classList.toggle('dark-mode');
+
+    if (body.classList.contains('dark-mode')) {
+        modeIcon.classList.remove('fa-sun');
+        modeIcon.classList.add('fa-moon');
+        modeIcon.style.color = 'white'; // Change the color of the icon
+        localStorage.setItem('darkMode', 'true');
+    } else {
+        modeIcon.classList.remove('fa-moon');
+        modeIcon.classList.add('fa-sun');
+        modeIcon.style.color = ''; // Reset the color of the icon
+        localStorage.removeItem('darkMode');
+    }
+}
+    </script>
+</body>
+</html>
